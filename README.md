@@ -19,7 +19,7 @@ Faça um teste antes no front-end do Vue antes de enviar para todos os contatos
 ![image](https://user-images.githubusercontent.com/9052611/145866060-351bc433-c902-4f18-974b-23ddc69df34a.png)
 ![image](https://user-images.githubusercontent.com/9052611/145866145-1e7e76d9-c0ee-48d9-be2d-f06b46c4f4c3.png)
 
-Após subir a aplicação no "Project setup" ou acessar https://amigosecreto-sms.herokuapp.com
+Após subir a aplicação no "Project setup" ou acessar https://amigosecreto.brunosecco.com
 Nas caixas do lado esquerdo, configure os nomes e números, um por linha e separado os valorer por "ponto e vírgula"
 Insira o X-Api-Token
 E se desejar adicione uma mensagem.
