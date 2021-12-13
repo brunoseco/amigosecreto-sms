@@ -26,4 +26,5 @@ Insira o X-Api-Token
 E se desejar adicione uma mensagem.
 Revise nas caixinhas centrais e clique em "processar".
 O resultado aparecerá na caixa do lado direito.
+(O resultado é somente se deu sucesso ou erro, não exibe as combinações)
 ![image](https://user-images.githubusercontent.com/9052611/145866454-b2270ed9-a066-4fc1-8a90-e5f9a53fdfdc.png)
