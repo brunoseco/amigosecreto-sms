@@ -9,8 +9,8 @@
                             <h5 class="card-title">Insira o número e nome dos participantes</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Insira um participante por linha, primeiro nome e
                                 depois telefone, separado por ;</h6>
-                            <textarea placeholder="Bruno;5515999999999" v-model="textoParticipantes"
-                                class="form-control" @blur="calculaParticipantes" rows="5" />
+                            <textarea placeholder="Bruno;5515999999999" v-model="textoParticipantes" class="form-control"
+                                @blur="calculaParticipantes" rows="5" />
                         </div>
                     </div>
 
@@ -26,8 +26,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Texto da mensagem</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Insira um texto complementar</h6>
-                            <textarea placeholder="Amigo chocolate" v-model="textoMensagem" class="form-control"
-                                rows="4" />
+                            <textarea placeholder="Amigo chocolate" v-model="textoMensagem" class="form-control" rows="4" />
                         </div>
                     </div>
                 </div>
@@ -54,7 +53,7 @@
                             <h5 class="card-title">Prévia da mensagem</h5>
                             <h6 class="card-subtitle mb-2 text-muted">
                                 Olá <strong>NOME 1</strong>, seu amigo(a) secreto(a) é <strong>NOME 2</strong>. {{
-                                        textoMensagem
+                                    textoMensagem
                                 }}
                             </h6>
                         </div>
@@ -120,7 +119,7 @@ export default {
                     const numero = items[1];
                     this.participantes.push({
                         nome: nome ? nome.trim().toUpperCase() : "",
-                        numero: nome ? numero.match(/\d+/g).join("") : ""
+                        numero: nome ? nome + "_" + numero.match(/\d+/g).join("") : ""
                     });
                 }
             }
@@ -147,7 +146,7 @@ export default {
             this.jsonEnvio = this.participantesAtribuidos.map((assign) => {
                 return {
                     nome: assign.p1.nome,
-                    numero: assign.p1.numero,
+                    numero: assign.p1.numero.split("_")[1],
                     status: "Pendente",
                     mensagem: `Olá ${assign.p1.nome}, seu amigo(a) secreto(a) é ${assign.p2.nome}. ${this.textoMensagem}`,
                 }
@@ -194,6 +193,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
